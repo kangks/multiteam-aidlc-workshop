@@ -1,0 +1,1 @@
+"Build a minimal REST API with\na health endpoint, payments endpoint and\nnotifications endpoint.\n\nSplit the application into a walking-skeleton\nUnit and two independent feature Units.\nWe will use team-owned Construction."

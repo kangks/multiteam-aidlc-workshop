@@ -1,0 +1,90 @@
+# Project-Level Rules
+
+> Project-specific specialisation and corrections. Loaded after `org.md` and
+> `team.md` as strict-additive guidance.
+> Populated by practices-discovery and the self-learning loop.
+>
+> Use sparingly: most teams don't need a project layer. Reach for it
+> only when this specific project needs stable, durable guidance beyond the
+> team practice (for example, package-specific release checks or an additional
+> regression suite for a legacy component).
+
+## Way of Working
+
+<!-- Project-specific specialisation. Example: -->
+<!-- This monorepo requires package-scoped branch names and a package owner -->
+<!-- review in addition to the team's normal merge policy. -->
+<!-- A project that merges into another branch than team.md names says so on its own line, read before team.md's: -->
+<!-- - **Integration branch**: develop -->
+
+## Walking Skeleton
+
+<!-- Project-specific specialisation. Example: -->
+<!-- The walking skeleton must exercise the legacy service adapter as well -->
+<!-- as the new service boundary. -->
+
+## Testing Posture
+
+<!-- Project-specific specialisation. -->
+
+## Guard Policy
+
+<!-- Project-specific. Mode: strict, relaxed, or off. Strict here holds for every intent, whatever one person asks in chat; relaxed or off here applies to every intent whose policy came from its scope, unless the person sets another; changing this line changes it. A section under the retired Change Control heading, written by an earlier release, is still read. -->
+
+## Deployment
+
+<!-- Project-specific specialisation. -->
+
+## Code Style
+
+<!-- Project-specific specialisation. -->
+
+## Tech Stack
+
+<!-- Technology choices locked for this project. -->
+
+## Decided
+
+<!-- Decisions made in earlier stages that should not be re-asked. -->
+<!-- Format: DECIDED: [decision] (Stage [slug], [date]) -->
+
+## Scope Overrides
+
+<!-- Custom scope rules for this project. -->
+
+## Forbidden
+
+<!-- Populated by practices-discovery affirmation gate. -->
+<!-- Format: - NEVER [behavior] (affirmed [date]) -->
+<!-- Example: - NEVER throw exceptions across service layer boundaries (affirmed 2026-05-17) -->
+
+- NEVER make the payments Unit depend on completion of the notifications Unit, or the notifications Unit depend on completion of the payments Unit. (affirmed 2026-11-22)
+
+## Mandated
+
+<!-- Populated by practices-discovery affirmation gate. -->
+<!-- Format: - ALWAYS [behavior] (affirmed [date]) -->
+<!-- Example: - ALWAYS use Result<T,E> for fallible operations in service layer (affirmed 2026-05-17) -->
+
+- ALWAYS commit completed work directly to the shared `main` branch. (affirmed 2026-11-22)
+
+- ALWAYS use team-owned Construction for this application. (affirmed 2026-11-22)
+
+- ALWAYS divide this application into a health walking-skeleton Unit, a payments feature Unit, and a notifications feature Unit. (affirmed 2026-11-22)
+
+- ALWAYS use a walking skeleton when the selected plan calls for one. (affirmed 2026-11-22)
+
+- ALWAYS use the health endpoint as this application's first end-to-end Unit. (affirmed 2026-11-22)
+
+- ALWAYS write a failing test before each implementation change. (affirmed 2026-11-22)
+
+- ALWAYS deploy merges automatically to staging. (affirmed 2026-11-22)
+
+- ALWAYS require separate approval before deploying to production. (affirmed 2026-11-22)
+
+- ALWAYS use the chosen stack's standard formatter, linter, and idiomatic naming. (affirmed 2026-11-22)
+
+## Corrections
+
+<!-- Project-specific corrections from human feedback. -->
+<!-- Format: NEVER/ALWAYS [behavior] (learned [date]) -->
